@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="card_form">
-    <form action="BackFornecedor.php" method="POST">
+    <form action="BackFornecedor.php" method="GET">
     <table>
         <tr>
             <th rowspan="2"><img src="LogoForneInjet.png" alt="LOGO_ForneInjet" height="120"></th>
@@ -70,7 +70,7 @@
     <div class="botao">
         
         <input class="btn1" type="submit" onclick="return valida" value="Enviar">
-        <input class="btn2" type="button" onclick=""value="Cancelar">
+        <input class="btn2" type="button" value="Cancelar">
         
     </div>
     </form>
