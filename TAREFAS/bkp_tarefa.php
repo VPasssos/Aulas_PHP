@@ -10,7 +10,7 @@
 <body>
     <h1>Gerenciador de Tarefas</h1>
     <!-- Aqui irá o restante dos códigos... -->
-    <form action="" method="">
+    <f-orm action="" method="">
         <fieldset>
             <legend>Nova Tarefa</legend>
             <label>
