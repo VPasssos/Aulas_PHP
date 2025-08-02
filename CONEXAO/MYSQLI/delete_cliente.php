@@ -12,9 +12,9 @@
 
 
     if ($stmt->execute()){
-        echo "Cliente atualizado com sucessos!";
+        echo "Cliente deletado com sucessos!";
     } else {
-        echo "Erro ao atualizar cliente: ".$stmt->error;
+        echo "Erro ao deletar cliente: ".$stmt->error;
     }
 
     $stmt->close();

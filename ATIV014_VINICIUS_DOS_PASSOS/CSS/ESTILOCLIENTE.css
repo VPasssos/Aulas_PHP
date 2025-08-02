@@ -1,0 +1,16 @@
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color:beige
+}
+
+.titulo{
+    font-size: 30px;
+}
+
+th{
+    font-size: 20px;
+}
+
+address{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
