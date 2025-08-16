@@ -1,0 +1,5 @@
+
+body { padding-top: 2rem; }
+.table-actions a { margin-right: .5rem; }
+footer { margin-top: 3rem; font-size: .9rem; color: #666; }
+.form-required:after { content: " *"; color: #dc3545; }

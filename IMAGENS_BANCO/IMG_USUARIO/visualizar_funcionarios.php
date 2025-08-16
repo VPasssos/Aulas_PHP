@@ -16,10 +16,10 @@ try{
         
         $sql = "SELECT nome, telefone, tipo_foto, foto FROM funcionarios where id=:id";
         $stmt = $pdo->prepare($sql);
-        $stmt = bindParam(':id',$id, PDO::PARAM_INT);
+        $stmt -> bindParam(':id',$id, PDO::PARAM_INT);
         $stmt->execute();
 
-        if($stmt->rowConut()>0){
+        if($stmt->rowCount()>0){
             $funcionario = $stmt->fetch(PDO::FETCH_ASSOC);
             if($_SERVER['REQUEST_METHOD']=="POST" && isset($_POST['excluir_id'])){
                 $excluir_id = $_POST['excluir_id'];
@@ -45,13 +45,31 @@ try{
             <body>
                 <h1>Dados dos Funcionarios</h1>
                 <p>Nome:<?=htmlspecialchars($funcionario["nome"])?></p>
+                <p>Telefone:<?=htmlspecialchars($funcionario["telefone"])?></p>
+                <p>Foto:</p>
+                <img src="data:<?=$funcionario['tipo_foto']?>;base64,<?=base64_encode($funcionario['foto'])?>" alt="foto do funcionario">
+                <form method="POST">
+                    <input type="hidden" name="excluir_id" value="<?= $id?>">
+                    <button type="submit">Excluir Funcionario</button>
+
+
+
+                </form>
             </body>
             </html>
+            <?php
+        
+        }else {
+            echo "funcionarios nao emcontrado";
         }
 
 
+    }else{
+        echo "ID nao fornecido";
     }
 
+} catch(PDOException $e){
+    echo "Erro: ".$e->getMessagem();
 }
 
 ?>

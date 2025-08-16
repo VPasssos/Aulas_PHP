@@ -47,7 +47,7 @@ try{
     <?php foreach($funcionarios as $funcionario):?>
         <li>
             <!-- CODIGO ABAIXO CRIA LINK PARA VISUALIZAR DETALHES DO FUNCIONARIO -->
-            <a href="visualizar_funcionarios.php?id<?=$funcionario['id']?>">
+            <a href="visualizar_funcionarios.php? id=<?=$funcionario['id']?>">
                 <?= htmlspecialchars($funcionario['nome'])?>
             </a>
             <!-- FORMULARIO PARA EXCLUIR FUNCIONARIOS -->
